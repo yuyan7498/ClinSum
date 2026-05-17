@@ -1,0 +1,731 @@
+{
+  "basic": {
+    "patient_name": "陳彥妤",
+    "chart_no": "21464824",
+    "sex": "女",
+    "birth_date": "2013-09-25",
+    "admission_date": "2026-03-22",
+    "discharge_date": "",
+    "department": ""
+  },
+  "chief_complaint": "Bilateral flank pain for 2 days, with lower limb numbness and weakness since yesterday",
+  "admission_diagnoses": [
+    {
+      "text": "Lower limb motor deficits and numbness,T9 compression fracture with cord compression related",
+      "is_cancer": false,
+      "is_admission": true,
+      "raw_quote": "Lower limb motor deficits and numbness,T9 compression fracture with cord compression related"
+    },
+    {
+      "text": "Alveolar rhabdomyosarcoma, left forearm, IRS group IV, TNM stage 4, with suspected metastasis over T1 and L3 spine, right pelvic bone and left axilla LN, s/p biopsy and debulking on 5/21, under protocol of TPOG RMS HR 2016(2025/6/2-), s/p chemotherapy with week 38 chemotherapy VAC (Vincristine, Cyclophosphamide, Dactinomycin) during 03/06-03/07 -s/p R/T over tumor bed of left forearm(5040cGy/28fx,10/22-12/10),left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22",
+      "is_cancer": true,
+      "is_admission": true,
+      "raw_quote": "Alveolar rhabdomyosarcoma, left forearm, IRS group IV, TNM stage 4, with suspected metastasis over T1 and L3 spine, right pelvic bone and left axilla LN, s/p biopsy and debulking on 5/21, under protocol of TPOG RMS HR 2016(2025/6/2-), s/p chemotherapy with week 38 chemotherapy VAC (Vincristine, Cyclophosphamide, Dactinomycin) during 03/06-03/07 -s/p R/T over tumor bed of left forearm(5040cGy/28fx,10/22-12/10),left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22"
+    },
+    {
+      "text": "Suspect Jeavons syndrome, with seizure attack on 9/12, under Levetiracetam 1# TID",
+      "is_cancer": false,
+      "is_admission": true,
+      "raw_quote": "Suspect Jeavons syndrome, with seizure attack on 9/12, under Levetiracetam 1# TID"
+    },
+    {
+      "text": "Dropped left hand, tumor compression related, under rehabilitation",
+      "is_cancer": true,
+      "is_admission": true,
+      "raw_quote": "Dropped left hand, tumor compression related, under rehabilitation"
+    },
+    {
+      "text": "Depression, under alprazolam 0.125mg BID, fluoxetine 1# QOD",
+      "is_cancer": false,
+      "is_admission": true,
+      "raw_quote": "Depression, under alprazolam 0.125mg BID, fluoxetine 1# QOD"
+    }
+  ],
+  "discharge_diagnoses": [
+    {
+      "text": "Lower limb motor deficits and numbness,T9 compression fracture with cord compression related,s/p laminectomy and decompression on 3/25, tumor recurrence and progression noted on 2026/4/15 MRI, now paraplegia",
+      "is_cancer": true,
+      "is_admission": false,
+      "raw_quote": "Lower limb motor deficits and numbness,T9 compression fracture with cord compression related,s/p laminectomy and decompression on 3/25, tumor recurrence and progression noted on 2026/4/15 MRI, now paraplegia"
+    },
+    {
+      "text": "Alveolar rhabdomyosarcoma, left forearm, IRS group IV, TNM stage 4, with suspected metastasis over T1 and L3 spine, right pelvic bone and left axilla LN, s/p biopsy and debulking on 5/21, under protocol of TPOG RMS HR 2016(2025/6/2-), s/p chemotherapy with week 41 chemotherapy VAC on 2026/4/8,week42 V on 2026/4/15 -s/p R/T over tumor bed of left forearm(5040cGy/28fx,10/22-12/10),left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22 -under R/T over T9,(T1,T3,L3?),3Gy/10fx(2026/4/13-,7fx until 20260427) -with several subcutaneous over left thigh,left back and left arm, suspected metastasis,under everolimus 1# qod and alpelisib 1# qod(4/24-),based on NGS data(PIK3CA H1047R,evidence 3A)",
+      "is_cancer": true,
+      "is_admission": false,
+      "raw_quote": "Alveolar rhabdomyosarcoma, left forearm, IRS group IV, TNM stage 4, with suspected metastasis over T1 and L3 spine, right pelvic bone and left axilla LN, s/p biopsy and debulking on 5/21, under protocol of TPOG RMS HR 2016(2025/6/2-), s/p chemotherapy with week 41 chemotherapy VAC on 2026/4/8,week42 V on 2026/4/15 -s/p R/T over tumor bed of left forearm(5040cGy/28fx,10/22-12/10),left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22 -under R/T over T9,(T1,T3,L3?),3Gy/10fx(2026/4/13-,7fx until 20260427) -with several subcutaneous over left thigh,left back and left arm, suspected metastasis,under everolimus 1# qod and alpelisib 1# qod(4/24-),based on NGS data(PIK3CA H1047R,evidence 3A)"
+    },
+    {
+      "text": "Suspect Jeavons syndrome, with seizure attack on 9/12, under Levetiracetam 1# TID",
+      "is_cancer": false,
+      "is_admission": false,
+      "raw_quote": "Suspect Jeavons syndrome, with seizure attack on 9/12, under Levetiracetam 1# TID"
+    },
+    {
+      "text": "Dropped left hand, tumor compression related, under rehabilitation",
+      "is_cancer": true,
+      "is_admission": false,
+      "raw_quote": "Dropped left hand, tumor compression related, under rehabilitation"
+    },
+    {
+      "text": "Depression, under alprazolam 0.125mg BID, fluoxetine 1# QOD",
+      "is_cancer": false,
+      "is_admission": false,
+      "raw_quote": "Depression, under alprazolam 0.125mg BID, fluoxetine 1# QOD"
+    },
+    {
+      "text": "濳在疾病",
+      "is_cancer": false,
+      "is_admission": false,
+      "raw_quote": "濳在疾病"
+    }
+  ],
+  "timeline": [
+    {
+      "date": "2025-05-21",
+      "category": "手術",
+      "event": "左前臂 Alveolar rhabdomyosarcoma biopsy and debulking",
+      "raw_quote": "Alveolar rhabdomyosarcoma, left forearm, IRS group IV, TNM stage 4, with suspected metastasis over T1 and L3 spine, right pelvic bone and left axilla LN, s/p biopsy and debulking on 5/21",
+      "in_admission": false
+    },
+    {
+      "date": "2025-05-21",
+      "category": "手術",
+      "event": "左前臂腫瘤 biopsy and debulking",
+      "raw_quote": "s/p biopsy and debulking on 5/21",
+      "in_admission": false
+    },
+    {
+      "date": "2025-06-02",
+      "category": "化療",
+      "event": "啟動 TPOG RMS HR 2016 化療計畫",
+      "raw_quote": "under protocol of TPOG RMS HR 2016(2025/6/2-)",
+      "in_admission": false
+    },
+    {
+      "date": "2025-06-02",
+      "category": "化療",
+      "event": "啟動 TPOG RMS HR 2016 化療計畫",
+      "raw_quote": "under protocol of TPOG RMS HR 2016(2025/6/2-)",
+      "in_admission": false
+    },
+    {
+      "date": "2025-10-22~2025-12-10",
+      "category": "放療",
+      "event": "左前臂腫瘤床放療 (5040cGy/28fx)",
+      "raw_quote": "s/p R/T over tumor bed of left forearm(5040cGy/28fx,10/22-12/10)",
+      "in_admission": false
+    },
+    {
+      "date": "2025-10-22~2025-12-03",
+      "category": "放療",
+      "event": "左腋下淋巴結放療 (4140cGy/23fx)",
+      "raw_quote": "left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22",
+      "in_admission": false
+    },
+    {
+      "date": "2025-10-22~2025-12-10",
+      "category": "放療",
+      "event": "左前臂腫瘤床放療 (5040cGy/28fx)",
+      "raw_quote": "s/p R/T over tumor bed of left forearm(5040cGy/28fx,10/22-12/10)",
+      "in_admission": false
+    },
+    {
+      "date": "2025-10-22~2025-12-03",
+      "category": "放療",
+      "event": "左腋下淋巴結放療 (4140cGy/23fx)",
+      "raw_quote": "left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22",
+      "in_admission": false
+    },
+    {
+      "date": "2026-02-13~2026-02-14",
+      "category": "化療",
+      "event": "第 35 週 VAC 化療 (Vincristine, Cyclophosphamide, Dactinomycin)",
+      "raw_quote": "s/p chemotherapy with week 35 chemotherapy VAC (Vincristine, Cyclophosphamide, Dactinomycin) during 02/13-02/14",
+      "in_admission": false
+    },
+    {
+      "date": "2026-03-06~2026-03-07",
+      "category": "化療",
+      "event": "第 38 週化療 VAC (Vincristine, Cyclophosphamide, Dactinomycin)",
+      "raw_quote": "s/p chemotherapy with week 38 chemotherapy VAC (Vincristine, Cyclophosphamide, Dactinomycin) during 03/06-03/07",
+      "in_admission": false
+    },
+    {
+      "date": "2026-03-25",
+      "category": "手術",
+      "event": "T9 pathological fracture 進行 surgical decompression",
+      "raw_quote": "Following surgical decompression on 03/25, her weakness and numbness improeved significantly initially.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-03-27",
+      "category": "併發症",
+      "event": "發生 transient hypotension 並調整 opioid analgesics 劑量",
+      "raw_quote": "The postoperative course was complicated by transient hypotension, leading to the titration of opioid analgesics on 03/27.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-02",
+      "category": "其他",
+      "event": "轉至一般病房，開始管理 adynamic ileus 與 neurogenic bowel",
+      "raw_quote": "After transferring to the general ward on 04/02, the clinical focus shifted to management of adynamic ileus and neurogenic bowel.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-06",
+      "category": "其他",
+      "event": "停止 morphine 並開始使用 prokinetic agents (Primperan, Mosapride)",
+      "raw_quote": "On 04/06, morphine was withheld and prokinetic agents (Primperan, Mosapride) were initiated, resulting in gradual improvement of abdominal pain.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-07",
+      "category": "手術",
+      "event": "移除手術縫線與 CVP line，並建立 Port-A",
+      "raw_quote": "On 04/07, surgical sutures and the CVP line were removed, and a Port-A was successfully established for long-term access.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-07",
+      "category": "其他",
+      "event": "因 hypomagnesemia 開始 MgO 補充",
+      "raw_quote": "Due to identified hypomagnesemia, MgO supplementation was started.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-08",
+      "category": "化療",
+      "event": "恢復 VAC chemotherapy regimen",
+      "raw_quote": "Oncologic treatment resumed on 04/08 with the VAC chemotherapy regimen and pending RT simulation.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-08",
+      "category": "其他",
+      "event": "因 epigastric pain 開始使用 PPI",
+      "raw_quote": "intermittent epigastric pain persisted, prompting the initiation of a PPI on 04/08",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-09",
+      "category": "其他",
+      "event": "Gastroenterology 會診",
+      "raw_quote": "and a Gastroenterology consultation on 04/09.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-10",
+      "category": "影像",
+      "event": "腹部超音波顯示 minimal ascites, some stool and normal bowel movement",
+      "raw_quote": "An abdominal ultrasound on 4/10 showed minimal ascites,some stool and normal bowel movement.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-11~2026-04-17",
+      "category": "併發症",
+      "event": "化療引起嚴重 cytopenias (Platelets 11K, Hb 7.3)，需輸血 (PRBC, platelet)",
+      "raw_quote": "During this week(4/11-17), the patient faced profound chemotherapy-induced cytopenias (Platelets 11K, Hb 7.3), requiring PRBC and platelet transfusions.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-12",
+      "category": "併發症",
+      "event": "活動後出現 sudden paraplegia",
+      "raw_quote": "Unfortunately,sudden paraplegia was noted on 4/12 after movement.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-15",
+      "category": "其他",
+      "event": "出現雙側腰痛 (bilateral flank pain)",
+      "raw_quote": "According to the patient, bilateral flank pain developed 2 days prior to admission",
+      "in_admission": false
+    },
+    {
+      "date": "2026-04-16",
+      "category": "其他",
+      "event": "出現下肢麻木與無力",
+      "raw_quote": "followed by lower limb numbness and weakness since yesterday",
+      "in_admission": false
+    },
+    {
+      "date": "2026-04-16",
+      "category": "影像",
+      "event": "MRI 確認 disease progression，T9 level 腫瘤增大",
+      "raw_quote": "Follow-up MRI on 04/16 confirmed the clinical suspicion of disease progression, showing increased tumor size and extent at the T9 level.",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-17",
+      "category": "影像",
+      "event": "影像顯示 T9 脊椎塌陷導致 spinal canal stenosis，以及 T11, L3 受累",
+      "raw_quote": "Imaging revealed collapse of T9 vertebra with soft tissue lesion causing spinal canal stenosis, along with additional vertebral involvement (T11, L3).",
+      "in_admission": false
+    },
+    {
+      "date": "2026-04-17",
+      "category": "其他",
+      "event": "診斷為 spinal cord compression syndrome",
+      "raw_quote": "Clinical findings of motor weakness (grade ~3/5) and sensory changes were noted, compatible with spinal cord compression syndrome.",
+      "in_admission": false
+    },
+    {
+      "date": "2026-04-17",
+      "category": "其他",
+      "event": "開始 dexamethasone 治療",
+      "raw_quote": "Neurosurgical consultation was obtained at PER, and dexamethasone therapy was initiated.",
+      "in_admission": false
+    },
+    {
+      "date": "2026-04-17",
+      "category": "併發症",
+      "event": "白血球低下 (WBC 1.57 K/uL)",
+      "raw_quote": "Due to leukopenia (WBC 1.57 K/uL) and concern for neurologic progression, the patient was admitted to the PICU",
+      "in_admission": false
+    },
+    {
+      "date": "2026-04-17",
+      "category": "併發症",
+      "event": "發生 neutropenic fever",
+      "raw_quote": "Due to neutropenic fever on 4/17",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-17",
+      "category": "其他",
+      "event": "開始使用 tazocin 與 GM 治療",
+      "raw_quote": "tazocin and GM initiated on 04/17",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-17~2026-04-18",
+      "category": "其他",
+      "event": "接受輸血 (transfusions)",
+      "raw_quote": "transfusions (04/17-18, 04/20)",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-17",
+      "category": "檢驗",
+      "event": "BE(b) 數值 2.7 mmol/L 與 -3.2 mmol/L",
+      "raw_quote": "20260417 ... BE(b) 2.7 mmol/L M: -3.2 - 1.8 ; F: -2.3 - 2.7 ... BE(b) -3.2 mmol/L",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-17",
+      "category": "檢驗",
+      "event": "Finger sugar 67 mg/dL",
+      "raw_quote": "20260417 ... Finger sugar 67 mg/dL Fasting: <= 100 ; random <= 140",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-20",
+      "category": "併發症",
+      "event": "血液學最低點 (hematologic nadir)，WBC 降至 0.31K (ANC < 100)",
+      "raw_quote": "e hematologic nadir this week, with WBC dropping to 0.31K (ANC ＜ 100) on 04/20",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-20",
+      "category": "其他",
+      "event": "接受輸血 (transfusions)",
+      "raw_quote": "transfusions (04/17-18, 04/20)",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-22",
+      "category": "放療",
+      "event": "恢復放射治療 (resumed RT)",
+      "raw_quote": "Radiotherapy was briefly held due to profound cytopenia but resumed on 04/22",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-22",
+      "category": "檢驗",
+      "event": "NGS 檢測發現 PIK3CA H1047R 突變",
+      "raw_quote": "On 04/22, Next-Generation Sequencing (NGS) revealed a PIK3CA H1047R mutation",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-23",
+      "category": "併發症",
+      "event": "出現顯著肋骨疼痛與喉嚨痛",
+      "raw_quote": "Since the resumption of RT, she has developed significant rib pain and a sore throat (04/23)",
+      "in_admission": true
+    },
+    {
+      "date": "2026-04-24",
+      "category": "標靶",
+      "event": "開始使用 everolimus 與 alpelisib 標靶治療",
+      "raw_quote": "Target therapy with everolims and alpelisib 1# qod alternatively was added on since 04/24 based on NGS report",
+      "in_admission": true
+    },
+    {
+      "date": "2026-09-12",
+      "category": "其他",
+      "event": "Jeavons syndrome 癲癇發作 (seizure attack)",
+      "raw_quote": "Suspect Jeavons syndrome, with seizure attack on 9/12",
+      "in_admission": false
+    },
+    {
+      "date": "",
+      "category": "放療",
+      "event": "持續進行 Radiotherapy 以控制症狀",
+      "raw_quote": "Radiotherapy continues for symptom control, but the prognosis remains poor due to rapid tumor regrowth during systemic therapy.",
+      "in_admission": true
+    }
+  ],
+  "surgeries": [],
+  "abnormal_labs": [
+    {
+      "date": "2026-03-27",
+      "item": "K",
+      "value": "3.0",
+      "unit": "mmol/L",
+      "ref_range": "M: 3.5 - 4.5 ; F: 3.4 - 4.4",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-27",
+      "item": "THb",
+      "value": "9.5",
+      "unit": "g/dl",
+      "ref_range": "M: 13.5 - 17.5 ; F: 11.4 - 15.5",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-27",
+      "item": "HCT",
+      "value": "29.2",
+      "unit": "%",
+      "ref_range": "M: 42 - 52 ; F: 37 - 48",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-27",
+      "item": "pO2",
+      "value": "109",
+      "unit": "mmHg",
+      "ref_range": "83- 108",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-27",
+      "item": "cSO2",
+      "value": "99.5",
+      "unit": "%",
+      "ref_range": "94- 98",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "K",
+      "value": "3.2",
+      "unit": "mmol/L",
+      "ref_range": "M: 3.5 - 4.5 ; F: 3.4 - 4.4",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "THb",
+      "value": "11.9",
+      "unit": "g/dl",
+      "ref_range": "M: 13.5 - 17.5 ; F: 11.4 - 15.5",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "HCT",
+      "value": "36.4",
+      "unit": "%",
+      "ref_range": "M: 42 - 52 ; F: 37 - 48",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pCO2",
+      "value": "31.6",
+      "unit": "mmHg",
+      "ref_range": "M: 35 - 48 ; F: 32 - 45",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pO2",
+      "value": "332",
+      "unit": "mmHg",
+      "ref_range": "83- 108",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "cHCO3-",
+      "value": "20.9",
+      "unit": "mmol/L",
+      "ref_range": "M: 22.2 - 28.3 ; F: 21.2 - 27.0",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "cTCO2",
+      "value": "21.8",
+      "unit": "mmol/L",
+      "ref_range": "22- 32",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "cSO2",
+      "value": "99.8",
+      "unit": "%",
+      "ref_range": "94- 98",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pCO2",
+      "value": "31.5",
+      "unit": "mmHg",
+      "ref_range": "35- 45",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pO2",
+      "value": "294.8",
+      "unit": "mmHg",
+      "ref_range": "83- 108",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "cTCO2",
+      "value": "21.1",
+      "unit": "mmol/L",
+      "ref_range": "22- 29",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "cSO2",
+      "value": "99.9",
+      "unit": "%",
+      "ref_range": "95- 98",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "HCT",
+      "value": "27",
+      "unit": "%",
+      "ref_range": "35- 49",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "K",
+      "value": "3.39",
+      "unit": "mmol/L",
+      "ref_range": "3.5- 5.1",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "GLU",
+      "value": "116",
+      "unit": "mg/dL",
+      "ref_range": "60- 95",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "THb",
+      "value": "9.1",
+      "unit": "g/dl",
+      "ref_range": "11.7- 17.3",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pO2",
+      "value": "321.5",
+      "unit": "mmHg",
+      "ref_range": "83- 108",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "HCT",
+      "value": "30",
+      "unit": "%",
+      "ref_range": "35- 49",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "GLU",
+      "value": "138",
+      "unit": "mg/dL",
+      "ref_range": "60- 95",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "THb",
+      "value": "10.0",
+      "unit": "g/dl",
+      "ref_range": "11.7- 17.3",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pO2",
+      "value": "300.8",
+      "unit": "mmHg",
+      "ref_range": "83- 108",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "HCT",
+      "value": "29",
+      "unit": "%",
+      "ref_range": "35- 49",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "K",
+      "value": "3.34",
+      "unit": "mmol/L",
+      "ref_range": "3.5- 5.1",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "GLU",
+      "value": "127",
+      "unit": "mg/dL",
+      "ref_range": "60- 95",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "THb",
+      "value": "9.5",
+      "unit": "g/dl",
+      "ref_range": "11.7- 17.3",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "GLU",
+      "value": "104",
+      "unit": "mg/dL",
+      "ref_range": "60- 95",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "THb",
+      "value": "7.9",
+      "unit": "g/dl",
+      "ref_range": "11.7- 17.3",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pCO2",
+      "value": "31.2",
+      "unit": "mmHg",
+      "ref_range": "35- 45",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "pO2",
+      "value": "280.4",
+      "unit": "mmHg",
+      "ref_range": "83- 108",
+      "flag": "H"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "cTCO2",
+      "value": "20.5",
+      "unit": "mmol/L",
+      "ref_range": "22- 29",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "HCT",
+      "value": "24",
+      "unit": "%",
+      "ref_range": "35- 49",
+      "flag": "L"
+    },
+    {
+      "date": "2026-03-25",
+      "item": "K",
+      "value": "2.81",
+      "unit": "mmol/L",
+      "ref_range": "3.5- 5.1",
+      "flag": "L"
+    }
+  ],
+  "radiology": [
+    {
+      "date": "2026-03-24",
+      "modality": "Chest AP view - portable",
+      "impression": "Post chemoport implantation from right subclavian approach with tip at SVC. Normal cardiac silhouette. No obvious patchy opacity.",
+      "raw_quote": "Post chemoport implantation from right subclavian approach with\ntip at SVC.\nNormal cardiac silhouette.\nNo obvious patchy opacity.\nInadequate lung expansion with crowded bronchovascular markings\nat bilateral lung fields."
+    },
+    {
+      "date": "2026-04-04",
+      "modality": "KUB, Supine",
+      "impression": "Mottled gas pattern along colon course is noted, implying fecal residues retention. Borederline dilatation of colon. Suggest clinical correlation.",
+      "raw_quote": "Mottled gas pattern along colon course is noted, implying fecal\nresidues retention.\nBorederline dilatation of colon. Suggest clinical correlation."
+    },
+    {
+      "date": "2026-04-01",
+      "modality": "KUB, Supine",
+      "impression": "Moderate to large colonic stool burden, greatest in the right colon and rectosigmoid colon. No disproportionately dilated small bowel loops. No abnormal radiopaque calculi identified on this image. Postsurgical hardware projects over the upper",
+      "raw_quote": "Moderate to large colonic stool burden, greatest in the right\ncolon and rectosigmoid colon. No disproportionately dilated\nsmall bowel loops. No abnormal radiopaque calculi identified on\nthis image. Postsurgical hardware projects over the upper\nlumbar spine."
+    },
+    {
+      "date": "2026-04-15",
+      "modality": "MRI (no/with contrast), T-spine",
+      "impression": "s/p laminectomy/decompression of T8/T9, partial tumor",
+      "raw_quote": "The MRI of the T-spine performed:\nCoronal T2WI with fat sat (localized)\nSagittal T1, T2WI\nAxial T1WI and T2WI with fat sat\nPost-contrast, sagittal and axial T1WI\nPREVIOUS MRI of T-spine: 2026-03-22\nFINDINGS:\ns/p laminectomy/decompression of T8/T9, partial tumor\nresection, T7-T8 and T10-T11 spines fixation.\nMultiple enhancing lesions with bone marrow replacement\ninvolving thoracolumbar spines with some compression fratures.\nAs correlated with clinical history and previous imagine\nfindings, c/w alveolar rhabdomyosarcoma with multiple bone\nmetastases. Recommend bone scan correlation and follow-up.\nExtensive enhancing tumor with pathology fracture involving T9\nvertebral body, with circumferential epidural space and\nbilateral paraspinal soft tissues involvements, causing severe\nspinal stenosis "
+    },
+    {
+      "date": "2026-03-25",
+      "modality": "T-spine AP - portable",
+      "impression": "X-Ray #finding(s) Status instrument fixation in the lower T spine.",
+      "raw_quote": "X-Ray\n#finding(s)\nStatus instrument fixation in the lower T spine."
+    }
+  ],
+  "pathology": [
+    {
+      "date": "2026-03-26",
+      "site": "Spine, T9",
+      "diagnosis": "Spine, T9, \"1\", tumor curretage and cord decompression --- Metastatic rhabdomyosarcoma, compatible with alveolar rhabdomyosarcoma",
+      "raw_quote": "Pathological diagnosis:\nSpine, T9, \"1\", tumor curretage and cord decompression\n--- Metastatic rhabdomyosarcoma, compatible with alveolar\nrhabdomyosarcoma\nGross:\nThe specimen consists of multiple pieces of tan-brown soft and\nfirm tissue, labelled spine T9, \"1\", measuring up to 0.7 x\n0.5 x 0.3 cm. All are embedded for sections in two blocks as\nA~B. (Note: A= non-decalcified part, B= decalcified part)\nMicroscopy:\nThe sections of the specimen show a picture of infiltrative\nsmall round blue neoplastic cells with extreme high N/C ratio\nand crushed artifact in the soft tissue and bone tissue,\ndemonstrating positive for Desmin, Myogenin and Myo-D1\nimmunostains(stains performed in PATH#15-11834).\nCombined with clinical history, metastatic rhabdomyosarcoma is\nconsidered, and compatible with alveolar"
+    },
+    {
+      "date": "2026-03-26",
+      "site": "Spine, T9",
+      "diagnosis": "Spine, T9, \"3\", tumor curretage and cord decompression --- Metastatic rhabdomyosarcoma, compatible with alveolar rhabdomyosarcoma",
+      "raw_quote": "Pathological diagnosis:\nSpine, T9, \"3\", tumor curretage and cord decompression\n--- Metastatic rhabdomyosarcoma, compatible with alveolar\nrhabdomyosarcoma\nGross:\nThe specimen consists of five pieces of tan-brown soft and\nfirm tissue, labelled spine T9, \"3\", measuring up to 1.2 x 0.9\nx 0.3 cm. All are embedded for sections in two blocks as A~B.\n(Note: A= non-decalcified part, B= decalcified part)\nMicroscopy:\nThe sections of the specimen show a picture of infiltrative\nsmall round blue neoplastic cells with extreme high N/C ratio\nand crushed artifact in the soft tissue and bone tissue,\ndemonstrating positive for Desmin, Myogenin and Myo-D1\nimmunostains.\nCombined with clinical history, metastatic rhabdomyosarcoma is\nconsidered, and compatible with alveolar rhabdomyosarcoma.\nNote: The slide has "
+    },
+    {
+      "date": "2026-03-26",
+      "site": "Spine, T9",
+      "diagnosis": "Spine, T9, \"2\", tumor curretage and cord decompression --- Metastatic rhabdomyosarcoma, compatible with alveolar rhabdomyosarcoma",
+      "raw_quote": "Pathological diagnosis:\nSpine, T9, \"2\", tumor curretage and cord decompression\n--- Metastatic rhabdomyosarcoma, compatible with alveolar\nrhabdomyosarcoma\nGross:\nThe specimen consists of multiple pieces of tan-brown soft and\nfirm tissue, labelled spine T9, \"2\", measuring up to 0.4 x 0.3\nx 0.3 cm. All are embedded for sections in two blocks as A~B.\n(Note: A= non-decalcified part, B= decalcified part)\nMicroscopy:\nThe sections of the specimen show a picture of infiltrative\nsmall round blue neoplastic cells with extreme high N/C ratio\nand crushed artifact in the soft tissue and bone tissue,\ndemonstrating positive for Desmin, Myogenin and Myo-D1\nimmunostains(stains performed in PATH#15-11834).\nCombined with clinical history, metastatic rhabdomyosarcoma is\nconsidered, and compatible with alveolar"
+    }
+  ],
+  "treatment_course_raw": "The patient was admitted for T9 pathological fracture with spinal cord compression. Following surgical\ndecompression on 03/25, her weakness and numbness improeved significantly initially. The postoperative\ncourse was complicated by transient hypotension, leading to the titration of opioid analgesics on 03/27. After\ntransferring to the general ward on 04/02, the clinical focus shifted to management of adynamic ileus and\nneurogenic bowel. Despite regular laxatives, persistent abdominal pain and fecal loading were noted. On\n04/06, morphine was withheld and prokinetic agents (Primperan, Mosapride) were initiated, resulting in\ngradual improvement of abdominal pain.\nOn 04/07, surgical sutures and the CVP line were removed, and a Port-A was successfully established for\nlong-term access. Due to identified hypomagnesemia, MgO supplementation was started. Oncologic treatment\nresumed on 04/08 with the VAC chemotherapy regimen and pending RT simulation. Although back pain has\nimproved with mobilization, intermittent epigastric pain persisted, prompting the initiation of a PPI on 04/08\nand a Gastroenterology consultation on 04/09. An abdominal ultrasound on 4/10 showed minimal ascites,some\nstool and normal bowel movement.\nDuring this week(4/11-17), the patient faced profound chemotherapy-induced cytopenias (Platelets 11K, Hb\n7.3), requiring PRBC and platelet transfusions. Unfortunately,sudden paraplegia was noted on 4/12 after\nmovement. Follow-up MRI on 04/16 confirmed the clinical suspicion of disease progression, showing\nincreased tumor size and extent at the T9 level. Radiotherapy continues for symptom control, but the\nprognosis remains poor due to rapid tumor regrowth during systemic therapy.Her family also refused further\noperation.\n(04/18-04/26)\nThe patient experienced a severe hematologic nadir this week, with WBC dropping to 0.31K (ANC ＜ 100)\non 04/20. Due to neutropenic fever on 4/17,tazocin and GM initiated on 04/17. The blood culture and urine\nculture showed negative results. Radiotherapy was briefly held due to profound cytopenia but resumed on\n04/22 as counts recovered (WBC 3.15K) following G-CSF support and transfusions (04/17-18, 04/20). On\n04/22, Next-Generation Sequencing (NGS) revealed a PIK3CA H1047R mutation, and the family has\nexpressed a desire to explore targeted therapy options despite limited evidence. Neurologically, lower\nextremity paralysis remains unchanged. Since the resumption of RT, she has developed significant rib pain\nand a sore throat (04/23), necessitating the addition of Gabapentin for neuropathic pain and topical throat\nsprays. Target therapy with everolims and alpelisib 1# qod alternatively was added on since 04/24 based on\nNGS report. As of 04/27, she is hemodynamically stable and recovering from the chemotherapy nadir,\ncontinuing palliative radiotherapy, target therapy and symptom-focused care.\nDue to residence in Tainan,her parents want further care in Tainan.\n\n1.一般檢查記錄\nBLOOD: WBC RBC HGB HCT MCV MCH MCHC RDW PLT\n20260324 13.94 3.42 10.4 32.8 95.9 30.4 31.7 16.9 127\n20260326 25.74 4.00 12.0 36.1 90.3 30.0 33.2 15.9 172\n20260327 8.99 2.99 9.3 27.7 92.6 31.1 33.6 15.6 86\n20260328 4.82 2.85 8.7 25.4 89.1 30.5 34.3 15.7 69\n20260329 10.36 3.21 9.7 28.5 88.8 30.2 34.0 15.7 73\n20260407 3.89 2.91 8.7 27.0 92.8 29.9 32.2 14.8 84\n20260414 1.29 2.44 7.3 23.2 95.1 29.9 31.5 13.4 11\n20260415 1.54 2.77 8.2 24.9 89.9 29.6 32.9 13.3 33\n20260417 0.64 2.48 7.4 21.3 85.9 29.8 34.7 13.4 12\n20260420 0.31 2.77 8.3 25.2 91.0 30.0 32.9 13.0 27\n20260422 3.15 3.09 9.1 28.3 91.6 29.4 32.2 13.4 63\n20260424 7.20 3.53 10.3 32.7 92.6 29.2 31.5 14.1 63\n20260427 5.04 2.73 8.1 25.3 92.7 29.7 32.0 14.2 26\nBLOOD: BAND SEG LYM MONO EISO BASO META MYEL PROM BLAS\nATY ABN\n20260324 90 6 4 0 0\n20260326 0 93 4.5 2.5 0 0 0 0 0 0\n0\n20260327 92.7 2.8 4.3 0.1 0.1\n20260328 89.0 5.2 4.8 0.6 0.4\n20260407 3 79 10 7 1 0\n20260414 76 22 2 0 0\n20260415 2 70 26 2 0 0\n20260417 88.0 7.4 1.8 1.5 1.3\n20260420 20 60 20 0 0\n20260422 20 25 10 30 0 0 2 12 1\n20260424 10 58 10 15 0 0 4 3\n20260427 3 80 4 6 0 0 2 5\nURINE: RBC WBC PRO SUG EPITH OCCL CAST OTHER\n20260417 0-2 0-2 - - 0-5 - Bacte\nBIOCHEM ALB TP GOT GPT ALP LDH CK TBIL DBIL\n20260327 3.4 25 12\n20260407 29 8\n20260417 52 9\nBIOCHEM BUN CREA NA K CL CA IP UA GLU\n20260326 141 3.5 111 8.7\n20260327 6 0.47 138 3.2 8.4\n20260328 141 3.6 8.7\n20260407 8 0.29 140 3.4 101 9.1\n20260417 12 0.30 136 3.6\n2.特殊檢查紀錄\n*** 2026-03-27 Random Plasma Glucose\n檢體為全血\n001\nFinger sugar 110 mg/dL Fasting: <= 100 ; random <= 140\n*** 2026-03-27 K,\nK 3.0 mmol/L M: 3.5 - 4.5 ; F: 3.4 - 4.4\n*** 2026-03-27 HGB,\nTHb 9.5 g/dl M: 13.5 - 17.5 ; F: 11.4 - 15.5\n*** 2026-03-27 HCT\nHCT 29.2 % M: 42 - 52 ; F: 37 - 48\n*** 2026-03-27 NA,\nNA 139 mmol/L 136- 145\n*** 2026-03-27 Blood gas analysis\npH 7.471 7.35- 7.45\npCO2 36.2 mmHg M: 35 - 48 ; F: 32 - 45\npO2 109 mmHg 83- 108\ncHCO3- 26.4 mmol/L M: 22.2 - 28.3 ; F: 21.2 - 27.0\ncTCO2 27.5 mmol/L 22- 32\nBE(b) 2.7 mmol/L M: -3.2 - 1.8 ; F: -2.3 - 2.7\ncSO2 99.5 % 94- 98\n*** 2026-03-27 Free Ca,\nFree Ca++ 0.81 mmol/L 1.15- 1.33\n*** 2026-03-26 Random Plasma Glucose\n檢體為全血\n001\nFinger sugar 120 mg/dL Fasting: <= 100 ; random <= 140\n*** 2026-03-25 Random Plasma Glucose\n檢體為全血\n001\nFinger sugar 67 mg/dL Fasting: <= 100 ; random <= 140\n*** 2026-03-25 K,\nK 3.2 mmol/L M: 3.5 - 4.5 ; F: 3.4 - 4.4\n*** 2026-03-25 HGB,\nTHb 11.9 g/dl M: 13.5 - 17.5 ; F: 11.4 - 15.5\n*** 2026-03-25 HCT\nHCT 36.4 % M: 42 - 52 ; F: 37 - 48\n*** 2026-03-25 NA,\nNA 145 mmol/L 136- 145\n*** 2026-03-25 Blood gas analysis\npH 7.428 7.35- 7.45\npCO2 31.6 mmHg M: 35 - 48 ; F: 32 - 45\npO2 332 mmHg 83- 108\ncHCO3- 20.9 mmol/L M: 22.2 - 28.3 ; F: 21.2 - 27.0\ncTCO2 21.8 mmol/L 22- 32\nBE(b) -2.7 mmol/L M: -3.2 - 1.8 ; F: -2.3 - 2.7\ncSO2 99.8 % 94- 98\n*** 2026-03-25 Free Ca,\nFree Ca++ 1.08 mmol/L 1.15- 1.33\n*** 2026-03-25 Blood gas analysis\npH 7.410 7.35- 7.45\npCO2 31.5 mmHg 35- 45\npO2 294.8 mmHg 83- 108\ncHCO3- 20.2 mmol/L\ncTCO2 21.1 mmol/L 22- 29\nBE(b) -3.2 mmol/L\ncSO2 99.9 % 95- 98\n*** 2026-03-25 HCT\nHCT 27 % 35- 49\n*** 2026-03-25 Free Ca,\nFree Ca++ 1.04 mmol/L 1.09- 1.30\n*** 2026-03-25 NA,\nNA 141.6 mmol/L 136- 146\n*** 2026-03-25 K,\nK 3.39 mmol/L 3.5- 5.1\n*** 2026-03-25 Random Plasma Glucose\nGLU 116 mg/dL 60- 95\n*** 2026-03-25 LACTATE\nLactate 1.0 mmol/L 0.5- 2.2\n*** 2026-03-25 HGB,\nTHb 9.1 g/dl 11.7- 17.3\n*** 2026-03-25 Mg,\nMg 0.47 mmol/L 0.45- 0.60\n*** 2026-03-25 Blood gas analysis\npH 7.421 7.35- 7.45\npCO2 35.9 mmHg 35- 45\npO2 321.5 mmHg 83- 108\ncHCO3- 23.5 mmol/L\ncTCO2 24.6 mmol/L 22- 29\nBE(b) 0.0 mmol/L\ncSO2 99.9 % 95- 98\n*** 2026-03-25 HCT\nHCT 30 % 35- 49\n*** 2026-03-25 Free Ca,\nFree Ca++ 1.19 mmol/L 1.09- 1.30\n*** 2026-03-25 NA,\nNA 139.4 mmol/L 136- 146\n*** 2026-03-25 K,\nK 3.81 mmol/L 3.5- 5.1\n*** 2026-03-25 Random Plasma Glucose\nGLU 138 mg/dL 60- 95\n*** 2026-03-25 LACTATE\nLactate 0.9 mmol/L 0.5- 2.2\n*** 2026-03-25 HGB,\nTHb 10.0 g/dl 11.7- 17.3\n*** 2026-03-25 Mg,\nMg 0.57 mmol/L 0.45- 0.60\n*** 2026-03-25 Blood gas analysis\npH 7.394 7.35- 7.45\npCO2 36.3 mmHg 35- 45\npO2 300.8 mmHg 83- 108\ncHCO3- 22.4 mmol/L\ncTCO2 23.5 mmol/L 22- 29\nBE(b) -1.5 mmol/L\ncSO2 99.9 % 95- 98\n*** 2026-03-25 HCT\nHCT 29 % 35- 49\n*** 2026-03-25 Free Ca,\nFree Ca++ 1.13 mmol/L 1.09- 1.30\n*** 2026-03-25 NA,\nNA 142.1 mmol/L 136- 146\n*** 2026-03-25 K,\nK 3.34 mmol/L 3.5- 5.1\n*** 2026-03-25 Random Plasma Glucose\nGLU 127 mg/dL 60- 95\n*** 2026-03-25 LACTATE\nLactate 0.8 mmol/L 0.5- 2.2\n*** 2026-03-25 HGB,\nTHb 9.5 g/dl 11.7- 17.3\n*** 2026-03-25 Mg,\nMg 0.54 mmol/L 0.45- 0.60\n*** 2026-03-25 Random Plasma Glucose\nGLU 104 mg/dL 60- 95\n*** 2026-03-25 LACTATE\nLactate 0.7 mmol/L 0.5- 2.2\n*** 2026-03-25 HGB,\nTHb 7.9 g/dl 11.7- 17.3\n*** 2026-03-25 Mg,\nMg 0.47 mmol/L 0.45- 0.60\n*** 2026-03-25 Blood gas analysis\npH 7.400 7.35- 7.45\npCO2 31.2 mmHg 35- 45\npO2 280.4 mmHg 83- 108\ncHCO3- 19.5 mmol/L\ncTCO2 20.5 mmol/L 22- 29\nBE(b) -4.0 mmol/L\ncSO2 99.9 % 95- 98\n*** 2026-03-25 HCT\nHCT 24 % 35- 49\n*** 2026-03-25 Free Ca,\nFree Ca++ 1.04 mmol/L 1.09- 1.30\n*** 2026-03-25 NA,\nNA 142.5 mmol/L 136- 146\n*** 2026-03-25 K,\nK 2.81 mmol/L 3.5- 5.1",
+  "discharge_status_raw": "Nil\n(A.治癒出院 B.繼續住院 C.改門診治療 D.死亡 E.病危自動\n\n出院 F.非病危自動出院 G轉院 H.身份變更 I.潛逃 J.自殺\nL.臨終志願出院 M.轉居家療護 K.其他)\nVS：謝明芸/ R：趙啟涵\n醫師：A484A 謝明芸"
+}

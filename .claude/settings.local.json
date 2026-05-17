@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ssh *)",
+      "Bash(where sshpass *)",
+      "Bash(python *)",
+      "Bash(pip install *)"
+    ]
+  }
+}

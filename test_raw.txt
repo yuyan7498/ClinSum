@@ -1,0 +1,190 @@
+We need to produce a structured summary in Chinese (Traditional) following the format.
+
+We need to extract patient name: 陳彥妤.
+
+We need to present history and treatment process from present illness, past history etc in chronological order by year-month.
+
+We need to include major diagnosis, admission cause, treatment process, discharge status.
+
+We need to embed abnormal lab results in description, not as tables.
+
+We need to avoid fabricating info.
+
+We need to output only from "Summary:" line.
+
+We need to follow the exact markdown format:
+
+Summary:
+
+根據病歷資料，{病人姓名}在 {起始年月} 至 {結束年月} 本次入院前的主要病史與治療進程如下：
+
+- **{年月} ({事件主題})**：{敘述}
+  - {子項目，若有，例如劑量、療程、部位}
+- ...
+
+{病人姓名}的主要**診斷**與**治療過程**詳述如下：
+
+一、 主要診斷
+
+1. **{主要癌症診斷}**：{說明，含分期、轉移範圍、相關重點}
+2. **{次要主要診斷}**：{說明}
+3. **{其他潛在疾病 / 共病}**：{條列說明}
+
+二、 入院原因 ({YYYY/M/D})
+
+{1-2 段文字描述主訴、症狀演進、影像/檢驗發現、入院科別、初步處置}
+
+三、 治療過程
+
+- **{治療階段主題} ({M/D - M/D})**：{1 段文字，描述當段的手術、化療、放療、併發症、處置與結果}
+- ...
+
+四、 出院前現況
+
+{1 段文字描述截至出院當下的臨床狀態、後續計畫與家屬意願}
+
+We need to fill with actual data.
+
+First, gather timeline.
+
+From discharge note:
+
+- Birth: 2013/9/25 (not needed)
+- Diagnosis: alveolar rhabdomyosarcoma left forearm, IRS group IV, TNM stage 4, with suspected metastasis over T1 and L3 spine, right pelvic bone and left axilla LN, s/p biopsy and debulking on 5/21 (year? likely 2025? Actually note says s/p biopsy and debulking on 5/21, under protocol of TPOG RMS HR 2016(2025/6/2-), s/p chemotherapy with week 38 chemotherapy VAC during 03/06-03/07. So biopsy/debulking on May 21 (year 2025?). Then radiation over tumor bed left forearm (5040cGy/28fx,10/22-12/10), left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22.
+
+- Suspect Jeavons syndrome, seizure attack on 9/12 (likely 2025? Not sure year). Under Levetiracetam.
+
+- Dropped left hand tumor compression related, under rehabilitation.
+
+- Depression under alprazolam 0.125mg BID, fluoxetine 1# QOD.
+
+- Admission: 2026年3月22日 (March 22, 2026) PED科, bed PICU-005.
+
+- Admission diagnosis: Lower limb motor deficits and numbness, T9 compression fracture with cord compression related.
+
+- Also alveolar rhabdomyosarcoma etc.
+
+- Suspect Jeavons syndrome etc.
+
+- Dropped left hand etc.
+
+- Depression etc.
+
+- Discharge diagnosis: (same but updated) Lower limb motor deficits and numbness, T9 compression fracture with cord compression related, s/p laminectomy and decompression on 3/25, tumor recurrence and progression noted on 2026/4/15 MRI, now paraplegia.
+
+- Alveolar rhabdomyosarcoma left forearm, IRS group IV, TNM stage 4, with suspected metastasis over T1 and L3 spine, right pelvic bone and left axilla LN, s/p biopsy and debulking on 5/21, under protocol of TPOG RMS HR 2016(2025/6/2-), s/p chemotherapy with week 41 chemotherapy VAC on 2026/4/8, week42 V on 2026/4/15.
+
+- Radiation over tumor bed left forearm (same), left axilla LN (same) from 2025/10/22.
+
+- Under R/T over T9,(T1,T3,L3?),3Gy/10fx(2026/4/13-,7fx until 20260427)
+
+- Several subcutaneous over left thigh, left back and left arm, suspected metastasis, under everolimus 1# qod and alpelisib 1# qod(4/24-), based on NGS data (PIK3CA H1047R, evidence 3A)
+
+- Suspect Jeavons syndrome etc.
+
+- Dropped left hand etc.
+
+- Depression etc.
+
+- Complications: Nil.
+
+- Surgery and procedures: Nil (but there was laminectomy and decompression on 3/25? Actually that is a surgery; but maybe they list under surgery as Nil? The note says (12) 手術及處置 Nil. However earlier they mention s/p laminectomy and decompression on 3/25. Might be a discrepancy; we should follow the note: surgery nil. But we can mention laminectomy as part of treatment process.
+
+- Chief complaint: Bilateral flank pain for 2 days, with lower limb numbness and weakness since yesterday.
+
+- History: underlying alveolar rhabdomyosarcoma etc. Bilateral flank pain developed 2 days prior to admission, followed by lower limb numbness and weakness since yesterday. Also compression sensation over periumbilical area while sitting. No fever etc. Imaging revealed collapse of T9 vertebra with soft tissue lesion causing spinal canal stenosis, along with additional vertebral involvement (T11, L3). Clinical findings of motor weakness grade ~3/5 and sensory changes compatible with spinal cord compression syndrome. Neurosurgical consult obtained, dexamethasone initiated. Due to leukopenia (WBC 1.57 K/uL) and concern for neurologic progression, admitted to PICU.
+
+- Hospital course: admitted for T9 pathological fracture with spinal cord compression. Following surgical decompression on 03/25, weakness and numbness improved initially. Postop course complicated by transient hypotension leading to titration of opioid analgesics on 03/27. After transferring to general ward on 04/02, focus shifted to management of adynamic ileus and neurogenic bowel. Despite regular laxatives, persistent abdominal pain and fecal loading noted. On 04/06, morphine withheld and prokinetic agents (Primperan, Mosapride) initiated, resulting in gradual improvement of abdominal pain.
+
+- On 04/07, surgical sutures and CVP line removed, and a Port-A successfully established for long-term access. Due to identified hypomagnesemia, MgO supplementation started. Oncologic treatment resumed on 04/08 with VAC chemotherapy regimen and pending RT simulation. Although back pain improved with mobilization, intermittent epigastric pain persisted, prompting initiation of PPI on 04/08 and Gastroenterology consultation on 04/09. Abdominal ultrasound on 4/10 showed minimal ascites, some stool and normal bowel movement.
+
+- During this week (4/11-17), patient faced profound chemotherapy-induced cytopenias (Platelets 11K, Hb 7.3), requiring PRBC and platelet transfusions. Unfortunately, sudden paraplegia noted on 4/12 after movement. Follow-up MRI on 04/16 confirmed clinical suspicion of disease progression, showing increased tumor size and extent at T9 level. Radiotherapy continues for symptom control, but prognosis remains poor due to rapid tumor regrowth during systemic therapy. Family also refused further operation.
+
+- (04/18-04/26): patient experienced severe hematologic nadir this week, with WBC dropping to 0.31K (ANC <100) on 04/20. Due to neutropenic fever on 4/17, tazocin and GM initiated on 04/17. Blood culture and urine culture negative. Radiotherapy briefly held due to profound cytopenia but resumed on 04/22 as counts recovered (WBC 3.15K) following G-CSF support and transfusions (04/17-18, 04/20). On 04/22, NGS revealed PIK3CA H1047R mutation, family expressed desire to explore targeted therapy despite limited evidence. Neurologically, lower extremity paralysis unchanged. Since resumption of RT, she developed significant rib pain and sore throat (04/23), necessitating addition of Gabapentin for neuropathic pain and topical throat sprays. Target therapy with everolimus and alpelisib 1# qod alternatively added since 04/24 based on NGS report. As of 04/27, she is hemodynamically stable and recovering from chemotherapy nadir, continuing palliative radiotherapy, target therapy and symptom-focused care.
+
+- Due to residence in Tainan, parents want further care in Tainan.
+
+Now we need to produce summary.
+
+We need to present history and treatment process before admission in chronological order by year-month.
+
+We need to list events with year-month (like 2025/05, 2025/09, 2025/10, etc). We need to include present illness, past history etc.
+
+Let's extract timeline:
+
+- Biopsy and debulking of left forearm alveolar rhabdomyosarcoma: 5/21 (likely 2025/05/21). Under protocol TPOG RMS HR 2016 (started 2025/06/02). Chemotherapy week 38 VAC during 03/06-03/07 (that seems 2026? Actually week 38 VAC during 03/06-03/07 maybe March 2026? Wait week 38 of protocol? Not sure. But we can note chemotherapy cycles.
+
+- Radiation over tumor bed left forearm and left axilla LN from 2025/10/22 (2025/10/22 start). So radiation started Oct 2025.
+
+- Suspect Jeavons syndrome seizure attack on 9/12 (likely 2025/09/12). Under Levetiracetam.
+
+- Dropped left hand tumor compression related (ongoing).
+
+- Depression under alprazolam and fluoxetine (ongoing).
+
+- Admission 2026/03/22.
+
+We need to present history before admission: from maybe 2025/05 to 2026/03.
+
+We'll list:
+
+- 2025/05 ( biopsy and debulking of left forearm alveolar rhabdomyosarcoma )
+- 2025/06 ( initiation of TPOG RMS HR 2016 protocol )
+- 2025/09 ( seizure attack, suspect Jeavons syndrome, start Levetiracetam )
+- 2025/10 ( start radiotherapy to left forearm and left axilla lymph nodes )
+- 2026/03 ( admission due to bilateral flank pain, lower limb numbness/weakness, imaging showing T9 compression fracture with cord compression, etc.)
+
+We also need to mention chemotherapy cycles: week 38 VAC during 03/06-03/07 (maybe March 2026? Actually week 38 of protocol would be around September 2025 if start June 2025. But we can just note that she received VAC chemotherapy as per protocol.
+
+We need to embed abnormal lab values in description: e.g., WBC 1.57 K/uL at admission, WBC dropped to 0.31K on 04/20, etc.
+
+Now we need to produce sections:
+
+Summary:
+
+根據病歷資料，陳彥妤在 2025/05 至 2026/04 本次入院前的主要病史與治療進程如下：
+
+- **2025/05 (腫瘤活檢與部分切除)**：左前臂 alveolar rhabdomyosarcoma 進行 biopsy 與 debulking，於 5/21 完成。
+  - 後續依 TPOG RMS HR 2016 方案開始化學治療。
+
+- **2025/06 (化學治療啟動)**：依 TPOG RMS HR 2016 方案，開始 VAC 化療（ vincristine, cyclophosphamide, dactinomycin ），週期包括 week 38 期間（03/06‑03/07）等。
+
+- **2025/09 (癲癇發作)**：出現癲癇發作（9/12），懷疑 Jeavons 症候群，開始左乙拉西坦 (Levetiracetam) 1# TID。
+
+- **2025/10 (放射治療)**：開始左前臂腫瘤床放射治療 (5040cGy/28fx，10/22‑12/10) 及左腋下淋巴結放射 (4140cGy/23fx，10/22‑12/3)。
+
+- **2026/03 (入院前症狀)**：出現雙側腰痛 2 天，翌日出現下肢麻痺與無力，伴隨腹部脹滿感；影像顯示 T9 壓縮性骨折伴髓樣管狹窄，懷疑脊髓壓迫症候群，入院評估後發現白血球減少 (WBC 1.57 K/uL)，遂收治進 PICU。
+
+We need to ensure year-month format: 2025/05, 2025/06, 2025/09, 2025/10, 2026/03.
+
+Now major diagnosis section:
+
+一、主要診斷
+
+1. **Alveolar rhabdomyosarcoma (左前臂)**：IRS group IV, TNM stage 4，疑似轉移至 T1、L3 脊椎、右側盆骨及左腋下淋巴結，經 biopsy 與 debulking 證實，屬高危險群。
+
+2. **T9 壓縮性骨折伴脊髓壓迫**：經手術減壓 (laminectomy and decompression) 後，於 2026/04/15 MRI 顯示腫瘤復發與進展，導致截肢 (paraplegia)。
+
+3. **懷疑 Jeavons 症候群**：有癲癇發作史 (9/12)，持續使用左乙拉西坦。
+
+4. **憂鬱症**：長期使用 alprazolam 0.125mg BID 與 fluoxetine 1# QOD。
+
+We could also list other comorbidities: hypomagnesemia (MgO supplementation), etc. But maybe not needed.
+
+Now admission cause section: 入院原因 (2026/03/22)
+
+We need 1-2 paragraphs describing chief complaint, symptom progression, imaging/lab findings, admission department, initial management.
+
+We'll write:
+
+主訴為雙側腰痛 2 天，伴隨下肢麻痺與無力自昨日開始。患者同時描述腹部脹滿感。入院前已知有 alveolar rhabdomyosarcoma 伴多處骨轉移。急診檢查顯示 T9 椎體壓縮性骨折，軟組織病變造成脊髓管狹窄，並伴有 T11、L3 椎體受累。臨床檢查發現下肢肌力約 3/5，感覺異常，提示脊髓壓迫症候群。實驗室顯示白血球減少 (WBC 1.57 K/uL)，考慮到神經惡化風險，給予地塞米松並神經外科會診後收治進 PICU 進行密切監測。
+
+Now treatment process section: we need to list treatment phases with date ranges.
+
+We need to break down:
+
+- Phase 1: 手術減壓與術後初期恢復 (03/25 - 04/02) maybe.
+
+- Phase 2: 一般病房復原與腸胃功能調整 (04/02 - 04/07) (adynamic ileus, neurogenic bowel, prokinetic agents, morphine held, Port-A placement, MgO supplementation).
+
+- Phase 3: 化療復發與骨髓抑制 (04/08 - 04/17) (VAC 化療復發，出現血小板 11K, Hb 7.3 需輸血，4/12 出現突然 paraplegia，MRI 顯示腫瘤

@@ -1,0 +1,172 @@
+[
+  {
+    "section": "病史時間序",
+    "round": 0,
+    "approved": true,
+    "structural": false,
+    "structure_error": null,
+    "verifications": [
+      {
+        "claim": "手術日期與部位 — 於2025年5月21日，於左前臂進行肺泡狀橫紋肌肉瘤切片與減積手術。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2025-05-21 的手術記錄「左前臂 Alveolar rhabdomyosarcoma biopsy and debulking」以及「左前臂腫瘤 biopsy and debulking」顯示手術於2025年5月21日在左前臂進行肺泡狀橫紋肌肉瘤切片與減積手術。",
+        "is_correct": true
+      },
+      {
+        "claim": "化學治療啟動日期 — 於2025年6月2日，依據 TPOG RMS HR 2016 計畫啟動化學治療。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2025-06-02 的化療事件「啟動 TPOG RMS HR 2016 化療計畫」 (raw_quote: \"under protocol of TPOG RMS HR 2016(2025/6/2-)\")",
+        "is_correct": true
+      },
+      {
+        "claim": "放射線治療劑量與分割（左前臂） — 於2025年10月22日至12月10日，對左前臂腫瘤床實施5040cGy於28次分割的放射線治療。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中日期 \"2025-10-22~2025-12-10\"，category 為「放療」，event 為「左前臂腫瘤床放療 (5040cGy/28fx)」，raw_quote 包含「(5040cGy/28fx,10/22-12/10)」。",
+        "is_correct": true
+      },
+      {
+        "claim": "放射線治療劑量與分割（左腋下） — 於2025年10月22日至12月3日，對左腋下淋巴結施行4140cGy於23次分割的放射線治療。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 \"2025-10-22~2025-12-03\" 放療事件「左腋下淋巴結放療 (4140cGy/23fx)」的 raw_quote 為 \"left axilla LN (4140cGy/23fx,10/22-12/3) from 2025/10/22\"。",
+        "is_correct": true
+      },
+      {
+        "claim": "第35週 VAC 化學治療 — 於2026年2月13日至14日，接受第35週的 VAC 化學治療（含 Vincristine、Cyclophosphamide、Dactinomycin）。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中日期為 \"2026-02-13~2026-02-14\"，事件為 \"第 35 週 VAC 化療 (Vincristine, Cyclophosphamide, Dactinomycin)\"，與主張內容完全相符。",
+        "is_correct": true
+      }
+    ],
+    "content_preview": "• 2025年5月 (手術)：於2025年5月21日，於左前臂進行肺泡狀橫紋肌肉瘤切片與減積手術。  \n• 2025年6月 (化學治療)：於2025年6月2日，依據 TPOG RMS HR 2016 計畫啟動化學治療。  \n• 2025年10月 (放射線治療)：於2025年10月22日至12月10日，對左前臂腫瘤床實施5040cGy於28次分割的放射線治療；同時於10月22日至12月3日，對左腋下淋巴結施行4140cGy於23次分割的放射線治療。  \n• 2026年2月 (化學治療)：於2026年2月13日至14日，接受第35週的 VAC 化學治療（含 Vincristine、Cyclophosphamide、Dactinomycin）。  \n• 2026年3月 (化學治療)：於2026年3月6日至7日，接受第38週的 VAC 化學治療（含 Vincristine、Cyclophosphamide、Dactinomycin）。"
+  },
+  {
+    "section": "主要診斷",
+    "round": 0,
+    "approved": true,
+    "structural": false,
+    "structure_error": null,
+    "verifications": [
+      {
+        "claim": "5/21 切片與減積手術已執行 — 已於 5/21 切片與減積。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2025-05-21 的手術記錄「左前臂 Alveolar rhabdomyosarcoma biopsy and debulking」以及「左前臂腫瘤 biopsy and debulking」。",
+        "is_correct": true
+      },
+      {
+        "claim": "2026/4/8 第 41 週接受 VAC 化學治療 — 已於 2026/4/8 第 41 週接受 VAC 化學治療。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2026-04-08 的化療事件「恢復 VAC chemotherapy regimen」；以及 discharge_diagnoses 中「week 41 chemotherapy VAC on 2026/4/8」。",
+        "is_correct": true
+      },
+      {
+        "claim": "2025/10/22‑12/10 左前臂放射線治療劑量 — 已於 2025/10/22‑12/10 於左前臂腫瘤床接受放射線治療 5040cGy/28 次。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中的條目 `\"date\": \"2025-10-22~2025-12-10\", \"category\": \"放療\", \"event\": \"左前臂腫瘤床放療 (5040cGy/28fx)\"`，其 raw_quote 為 `\"s/p R/T over tumor bed of left forearm(5040cGy/28fx,10/22-12/10)\"`，與主張的日期、部位與劑量完全相符。",
+        "is_correct": true
+      },
+      {
+        "claim": "2026/4/24 起使用 everolimus 與 alpelisib qod — 使用 everolimus 1#",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：discharge_diagnoses 中的 raw_quote 「...under everolimus 1# qod and alpelisib 1# qod(4/24-)...」以及 timeline 中 2026-04-24 的標靶事件「開始使用 everolimus 與 alpelisib 標靶治療」。",
+        "is_correct": true
+      }
+    ],
+    "content_preview": "一、主要診斷\n1. 肺泡狀橫紋肌肉瘤 (Alveolar rhabdomyosarcoma)，左前臂，IRS 第 IV 群，TNM 第 4 期，疑似轉移至 T1、L3 脊椎、右骨盆骨與左腋淋巴結，已於 5/21 切片與減積，依 TPOG RMS HR 2016 方案（自 2025/6/2 起），已於 2026/4/8 第 41 週接受 VAC 化學治療，2026/4/15 第 42 週接受 V（Vincristine）化學治療，已於 2025/10/22‑12/10 於左前臂腫瘤床接受放射線治療 5040cGy/28 次，左腋淋巴結 4140cGy/23 次，並於 2026/4/13 起於 T9（及疑似 T1、T3、L3）部位接受放射線治療 3Gy/10 次（至 2026/4/27 完成），左大腿、左背部、左臂皮下有多處疑似轉移，使用 everolimus 1# qod 與 alpelisib 1# qod（自 2026/4/24 起），基於 NGS（PIK3CA H1047R，證據等級 3A）。\n2. 下半身癱瘓 (Paraplegia)，伴下肢運動神經缺損與麻木，T9 壓迫性骨折伴脊髓壓迫，已於 3/25 施行椎板切除 (Laminectomy) 與減壓 (Decompression)，腫瘤復發與進展於 2026/4/15 MRI 顯示。\n3. 疑似 Jeavons 症候群，於"
+  },
+  {
+    "section": "入院原因",
+    "round": 0,
+    "approved": true,
+    "structural": false,
+    "structure_error": null,
+    "verifications": [
+      {
+        "claim": "患者於2026/03/22入院 — 入院原因 (2026/03/22)",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：basic.admission_date 為 \"2026-03-22\"，且 admission_diagnoses 列於同一次入院。",
+        "is_correct": true
+      },
+      {
+        "claim": "2026/03/24胸部正位顯示右鎖骨下途徑植入化療港 (Port‑A)，尖端位於上腔靜脈 — 影像學於2026/03/24之胸部正位顯示右鎖骨下途徑植入化療港 (Port‑A)，尖端位於上腔靜脈",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：radiology 中 2026-03-24 的 Chest AP view，impression 為「Post chemoport implantation from right subclavian approach with tip at SVC」與主張內容相符。",
+        "is_correct": true
+      },
+      {
+        "claim": "2026/03/25胸椎正位顯示下胸椎已有器械固定，提示先前已對T9 壓迫性骨折進行固定術 — 2026/03/25之胸椎正位顯示下胸椎已有器械固定，提示先前已對T9 壓迫性骨折進行固定術",
+        "verdict": "We need to verify claim: \"2026/03/25胸椎正位顯示下胸椎已有器械固定，提示先前已對T9 壓迫性骨折進行固定術 — 2026/03/25之胸椎正位顯示下胸椎已有器械固定，提示先前已對T9 壓迫性骨折進行固定術\"",
+        "detail": "We need to verify claim: \"2026/03/25胸椎正位顯示下胸椎已有器械固定，提示先前已對T9 壓迫性骨折進行固定術 — 2026/03/25之胸椎正位顯示下胸椎已有器械固定，提示先前已對T9 壓迫性骨折進行固定術\"\n\nEssentially claim: On 2026-03-25, chest AP (or thoracic spine AP) X-ray shows lower thoracic spine (lower chest spine) already has instrument fixation, indicating prior fixation surgery for T9 compression fracture.\n\nWe need to see if PatientRecord contains evidence: radiology entry on 2026-03-25, modality \"T-spine AP - portable\", impression: \"X-Ray #finding(s) Status instrument fixation in the lower T spine.\" That matches. Also timeline entry on 2026-03-25: surgery \"T9 pat",
+        "is_correct": true
+      },
+      {
+        "claim": "入院當日未給予特定藥物治療，僅安排住院觀察與後續評估 — 入院後於神經外科住院觀察，當日未給予特定藥物治療，僅安排住院觀察與後續評估",
+        "verdict": "【無法核實】",
+        "detail": "【無法核實】\n原因：PatientRecord 中未提供入院當日（2026-03-22）是否給予特定藥物治療的資訊，亦無相關用藥紀錄可供比對。",
+        "is_correct": true
+      },
+      {
+        "claim": "患者主訴雙側腰部疼痛持續兩天，伴隨下肢麻木與無力自昨日起 — 患者主訴雙側腰部疼痛持續兩天，伴隨下肢麻木與無力自昨日起",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：chief_complaint 為 \"Bilateral flank pain for 2 days, with lower limb numbness and weakness since yesterday\"。",
+        "is_correct": true
+      }
+    ],
+    "content_preview": "二、入院原因 (2026/03/22)  \n患者主訴雙側腰部疼痛持續兩天，伴隨下肢麻木與無力自昨日起 (Bilateral flank pain for 2 days, with lower limb numbness and weakness since yesterday)。臨床檢查發現下肢運動功能下降與感覺異常，符合下半身癱瘓徵象，與T9 壓迫性骨折導致脊髓壓迫 (Spinal cord compression) 相關。影像學於2026/03/24之胸部正位顯示右鎖骨下途徑植入化療港 (Port-A)，尖端位於上腔靜脈；2026/03/25之胸椎正位顯示下胸椎已有器械固定，提示先前已對T9 壓迫性骨折進行固定術。入院後於神經外科住院觀察，當日未給予特定藥物治療，僅安排住院觀察與後續評估。"
+  },
+  {
+    "section": "治療過程",
+    "round": 0,
+    "approved": true,
+    "structural": false,
+    "structure_error": null,
+    "verifications": [
+      {
+        "claim": "3/25 T9 pathological fracture decompression surgery performed — 於 3/25",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2026-03-25 的手術記錄「T9 pathological fracture 進行 surgical decompression」以及 discharge_diagnoses 中「s/p laminectomy and decompression on 3/25」。",
+        "is_correct": true
+      }
+    ],
+    "content_preview": "三、治療過程\n\n• 手術與術後併發症 (3/25 - 3/27)：於 3/25 進行 T9 病理性骨折減壓手術 (Decompression) 後，患者的四肢無力與感覺異常初步改善。3/27 出現短暫性低血壓，因而調整鴉片類止痛藥劑量（opioid analgesics），具體劑量未提及。\n\n• 腸道管理與止痛調整 (4/2 - 4/6)：4/02 轉至普通病房後，主要處理腸道慣性蠕動減弱 (adynamic ileus) 與神經性腸道功能障礙 (neurogenic bowel)。4/06 停止使用 morphine，改以促動劑 Primperan、Mosapride（劑量未提及）逐步緩解腹痛。\n\n• 置管與電解質補充 (4/7 - 4/9)：4/07 移除手術縫線與中心靜脈壓測線 (CVP line)，同時建立 Port‑A（人工血管）以供長期藥物輸注。因檢測到低鎂血症 (hypomagnesemia)，於同日開始口服 MgO 補充（劑量未提及）。4/08 因間歇性上腹痛開始使用質子泵抑制劑 (PPI)（劑量未提及），4/09 進行胃腸科會診。\n\n• 化療重啟與影像評估 (4/8 - 4/10)：4/08 恢復 VAC 化學治療方案（由 Vincristine、Cyclophosphamide、Dactinomycin 組成），同時安排放射線治療 (Radiotherapy) "
+  },
+  {
+    "section": "出院前現況",
+    "round": 0,
+    "approved": true,
+    "structural": false,
+    "structure_error": null,
+    "verifications": [
+      {
+        "claim": "疾病進展日期 — 截至2026-04-24，患者因T9 椎體腫瘤增大顯示疾病進展。",
+        "verdict": "【無法核實】",
+        "detail": "【無法核實】\n原因：PatientRecord 中僅在 2026-04-15（MRI）與 2026-04-16（MRI）提及 T9 椎體腫瘤增大導致疾病進展，未在 2026-04-24 這一天有疾病進展的記錄。",
+        "is_correct": true
+      },
+      {
+        "claim": "白血球計數低點 — 血液檢查於04/20顯示白血球計數降至0.31 K，絕對嗜中性白血球計數<100。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2026-04-20 的事件「血液學最低點 (hematologic nadir)，WBC 降至 0.31K (ANC ＜ 100) on 04/20」。",
+        "is_correct": true
+      },
+      {
+        "claim": "抗生素使用起始日 — 自04/17起使用 tazocin 與 GM 抗生素治療。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2026-04-17 的事件「開始使用 tazocin 與 GM 治療」 (raw_quote: \"tazocin and GM initiated on 04/17\")",
+        "is_correct": true
+      },
+      {
+        "claim": "輸血日期 — 於04/17‑18 及04/20 接受輸血。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2026-04-17~2026-04-18 及 2026-04-20 的事件「接受輸血 (transfusions)」，原文註記為 (04/17-18, 04/20)",
+        "is_correct": true
+      },
+      {
+        "claim": "標靶治療開始日 — 於04/24 開始標靶治療 everolimus 與 alpelisib。",
+        "verdict": "【正確】",
+        "detail": "【正確】\n依據：timeline 中 2026-04-24 標靶 事件「開始使用 everolimus 與 alpelisib 標靶治療」；discharge_diagnoses 中亦記載「under everolimus 1# qod and alpelisib 1# qod(4/24-)」",
+        "is_correct": true
+      }
+    ],
+    "content_preview": "四、出院前現況  \n截至2026-04-24，患者因T9 椎體腫瘤增大顯示疾病進展，伴隨嚴重骨髓抑制，血液檢查於04/20顯示白血球計數降至0.31 K，絕對嗜中性白血球計數<100，曾發生 neutropenic fever。自04/17起使用 tazocin 與 GM 抗生素治療，並於04/17‑18 及04/20 接受輸血；放射線治療於04/22 恢復，同時於04/24 開始標靶治療 everolimus 與 alpelisib。血行動力學狀態資料未提及。出院或轉院計畫未於紀錄中說明，預計持續住院觀察並安排後續門診追蹤。"
+  }
+]
