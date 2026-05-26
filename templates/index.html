@@ -13,11 +13,8 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <div class="logo">病摘</div>
-      <div>
-        <div class="brand-name">病摘總結系統</div>
-        <div class="brand-sub">出院病歷 AI 快速摘要</div>
-      </div>
+      <img class="logo-img" src="{{ url_for('static', filename='logo.png') }}" alt="病摘總結系統" />
+      <div class="brand-sub">出院病歷 AI 快速摘要</div>
     </div>
     <div class="status-chip" id="model-chip" title="連線狀態">
       <span class="dot"></span>
