@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ClinSum · 癌症病歷多代理人摘要</title>
+  <title>病摘總結系統</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,26 +13,23 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <div class="logo">CS</div>
+      <div class="logo">病摘</div>
       <div>
-        <div class="brand-name">ClinSum</div>
-        <div class="brand-sub">癌症病歷多代理人 AI 摘要</div>
+        <div class="brand-name">病摘總結系統</div>
+        <div class="brand-sub">出院病歷 AI 快速摘要</div>
       </div>
     </div>
     <div class="status-chip" id="model-chip" title="連線狀態">
       <span class="dot"></span>
-      <span class="model-name">
-        <span class="role-tag worker">工作者</span> {{ worker_model }}
-        <span class="role-tag archiver">歸檔</span> {{ archiver_model }}
-      </span>
+      <span class="model-name">{{ worker_model }}</span>
     </div>
   </header>
 
   <main class="layout">
-    <!-- LEFT: upload + pipeline status -->
+    <!-- LEFT: upload + controls -->
     <section class="panel panel-left">
       <h2 class="panel-title">1. 上傳病歷</h2>
-      <p class="hint">支援 PDF 檔，限 25MB 以內。檔案僅暫存於記憶體，不會落地。</p>
+      <p class="hint">支援 PDF 檔，限 25MB 以內。檔案僅暫存於記憶體，不落地。</p>
 
       <div class="dropzone" id="dropzone">
         <input type="file" id="file-input" accept="application/pdf,.pdf" hidden />
@@ -55,43 +52,43 @@
       </div>
 
       <div class="basic-info" id="basic-info" hidden>
-        <h3>檢測到病患資料</h3>
+        <h3>病患基本資料</h3>
         <pre id="basic-info-content"></pre>
       </div>
 
-      <h2 class="panel-title">2. 產生摘要</h2>
+      <h2 class="panel-title">2. 模式</h2>
+      <div class="mode-toggle" role="radiogroup" aria-label="摘要模式">
+        <label class="mode-opt">
+          <input type="radio" name="mode" value="quick" checked />
+          <div>
+            <div class="mode-title">含完整資料</div>
+            <div class="mode-sub">所有段落含檢驗/影像報告</div>
+          </div>
+        </label>
+        <label class="mode-opt">
+          <input type="radio" name="mode" value="quick_no_lab" />
+          <div>
+            <div class="mode-title">去除檢驗/影像</div>
+            <div class="mode-sub">聚焦臨床敘述，去除放射/病理報告</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="prompt-editor" id="prompt-editor">
+        <div class="prompt-editor-head">
+          <span>自訂 Prompt</span>
+          <button type="button" class="link-btn" id="reset-prompt-btn">還原預設</button>
+        </div>
+        <textarea id="prompt-textarea" spellcheck="false" rows="10"
+                  placeholder="必須保留 {sections_block} 佔位符。"></textarea>
+        <p class="hint">提示：<code>{sections_block}</code> 會被替換為 PDF 各段落原文。</p>
+      </div>
+
+      <h2 class="panel-title">3. 產生摘要</h2>
       <button id="run-btn" class="primary-btn" disabled>
-        <span class="btn-label">啟動三階段管線</span>
+        <span class="btn-label">啟動摘要</span>
         <span class="btn-spinner" hidden></span>
       </button>
-
-      <div class="pipeline" id="pipeline" hidden>
-        <h3>管線進度</h3>
-        <div class="stage" data-stage="extract">
-          <div class="stage-head"><span class="stage-dot"></span><span class="stage-name">階段 1 · PDF 解析</span></div>
-          <div class="stage-detail"></div>
-        </div>
-        <div class="stage" data-stage="archive">
-          <div class="stage-head"><span class="stage-dot"></span><span class="stage-name">階段 2 · 病歷歸檔 (Gemma4)</span></div>
-          <div class="stage-detail"></div>
-          <div class="archive-summary" id="archive-summary" hidden></div>
-        </div>
-        <div class="stage" data-stage="agents">
-          <div class="stage-head"><span class="stage-dot"></span><span class="stage-name">階段 3 · 工作者-監察者 (GPT-OSS)</span></div>
-          <div class="stage-detail"></div>
-          <ul class="section-list" id="section-list">
-            <li data-section="病史時間序"><span class="sect-name">病史時間序</span><span class="sect-status">—</span></li>
-            <li data-section="主要診斷"><span class="sect-name">主要診斷</span><span class="sect-status">—</span></li>
-            <li data-section="入院原因"><span class="sect-name">入院原因</span><span class="sect-status">—</span></li>
-            <li data-section="治療過程"><span class="sect-name">治療過程</span><span class="sect-status">—</span></li>
-            <li data-section="出院前現況"><span class="sect-name">出院前現況</span><span class="sect-status">—</span></li>
-          </ul>
-        </div>
-        <div class="stage" data-stage="done">
-          <div class="stage-head"><span class="stage-dot"></span><span class="stage-name">完成</span></div>
-          <div class="stage-detail"></div>
-        </div>
-      </div>
 
       <details class="diag">
         <summary>系統診斷</summary>
@@ -102,7 +99,7 @@
       </details>
     </section>
 
-    <!-- RIGHT: summary output -->
+    <!-- RIGHT: output -->
     <section class="panel panel-right">
       <div class="output-head">
         <h2 class="panel-title">摘要結果</h2>
@@ -114,39 +111,24 @@
 
       <div class="meta-row" id="meta-row" hidden>
         <span id="meta-elapsed"></span>
-        <span id="meta-events"></span>
-        <span id="meta-claims"></span>
+        <span id="meta-mode"></span>
       </div>
 
       <div id="output" class="output">
         <div class="placeholder">
           <h3>等待上傳病歷</h3>
-          <p>本系統使用三階段多代理人架構：</p>
-          <ol class="schema-preview">
-            <li><strong>PDF 解析</strong> — pdfplumber 抽取分段</li>
-            <li><strong>病歷歸檔</strong> — Gemma4 結構化抽取事件、診斷、異常檢驗</li>
-            <li><strong>工作者-監察者</strong> — GPT-OSS 撰寫 + 查核五個段落</li>
-          </ol>
-          <p class="schema-preview" style="margin-top: 1em;">
-            最終輸出依 Prompt.docx 情境一規格：
-            <span class="tag">病史時間序</span>
-            <span class="tag">主要診斷</span>
-            <span class="tag">入院原因</span>
-            <span class="tag">治療過程</span>
-            <span class="tag">出院前現況</span>
+          <p>上傳出院病摘 PDF，選擇模式後按「啟動摘要」。</p>
+          <p style="margin-top: 1em; font-size: 13px; color: var(--ink-3);">
+            <strong>含完整資料</strong>：所有段落送入模型，含檢驗數值與影像/病理報告原文。<br>
+            <strong>去除檢驗/影像</strong>：過濾放射線報告與病理報告，聚焦臨床敘述，日期混淆風險較低。
           </p>
         </div>
       </div>
-
-      <details class="review-log" id="review-log" hidden>
-        <summary>監察者審查日誌</summary>
-        <div id="review-log-body"></div>
-      </details>
     </section>
   </main>
 
   <footer>
-    <span>ClinSum · NCKUH MedFlow · <span id="footer-host"></span></span>
+    <span>病摘總結系統 · <span id="footer-host"></span></span>
   </footer>
 
   <script src="{{ url_for('static', filename='script.js') }}"></script>

@@ -215,6 +215,84 @@ html, body {
 .ghost-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
 .ghost-btn:disabled { opacity: .5; cursor: not-allowed; }
 
+/* ---------- Mode toggle ---------- */
+.mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.mode-opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  background: var(--panel);
+  transition: all .12s;
+}
+.mode-opt:hover { border-color: var(--accent); background: var(--panel-2); }
+.mode-opt:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.mode-opt input[type="radio"] {
+  accent-color: var(--accent);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.mode-title { font-weight: 600; font-size: 14px; color: var(--ink); }
+.mode-sub  { font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+
+/* ---------- Prompt editor (quick mode) ---------- */
+.prompt-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.prompt-editor-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.prompt-editor textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 150px;
+  padding: 10px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.prompt-editor textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.prompt-editor .hint { margin: 0; font-size: 12px; }
+.prompt-editor code {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
 /* ---------- Model picker ---------- */
 .model-picker {
   display: flex;

@@ -4,7 +4,26 @@
       "Bash(ssh *)",
       "Bash(where sshpass *)",
       "Bash(python *)",
-      "Bash(pip install *)"
+      "Bash(pip install *)",
+      "Bash(docker --version)",
+      "Bash(docker run *)",
+      "PowerShell(Get-Service *)",
+      "PowerShell(Start-Service *)",
+      "PowerShell(wsl --status 2>&1; wsl --list --verbose 2>&1)",
+      "Bash(node -c static/script.js)",
+      "Bash(git rm *)",
+      "Bash(curl -s http://127.0.0.1:5000/api/quick/default_prompt)",
+      "Bash(curl -s -o /dev/null -w \"GET / → %{http_code}\\\\n\" http://127.0.0.1:5000/)",
+      "Bash(curl -s -F \"file=@data/23325106_Discharge Note.pdf\" http://127.0.0.1:5000/api/extract)",
+      "Bash(curl -s http://127.0.0.1:5000/api/health)",
+      "Bash(curl -sN -F \"file=@data/23325106_Discharge Note.pdf\" -F \"prompt=請用一句話總結這份病歷的主要診斷。原始病歷如下：{sections_block}\" http://127.0.0.1:5000/api/quick)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "Bash(curl -s --max-time 10 http://140.116.240.181:45001/api/tags)",
+      "Bash(curl -v --max-time 10 http://140.116.240.181:45001/api/tags)",
+      "Bash(curl -s --max-time 10 http://140.116.240.181:45001/api/version)",
+      "Bash(curl -s --max-time 25 http://127.0.0.1:5000/api/health)",
+      "PowerShell(Get-NetTCPConnection)",
+      "Bash(not exist *)"
     ]
   }
 }
