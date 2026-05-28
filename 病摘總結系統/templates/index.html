@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>病摘總結系統</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">病摘</div>
+      <div>
+        <div class="brand-name">病摘總結系統</div>
+        <div class="brand-sub">出院病歷 AI 快速摘要</div>
+      </div>
+    </div>
+    <div class="status-chip" id="model-chip" title="連線狀態">
+      <span class="dot"></span>
+      <span class="model-name">{{ worker_model }}</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: upload + controls -->
+    <section class="panel panel-left">
+      <h2 class="panel-title">1. 上傳病歷</h2>
+      <p class="hint">支援 PDF 檔，限 25MB 以內。檔案僅暫存於記憶體，不落地。</p>
+
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="file-input" accept="application/pdf,.pdf" hidden />
+        <div class="dz-empty" id="dz-empty">
+          <svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3v14m0 0l-5-5m5 5l5-5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M5 21h14" stroke-linecap="round" />
+          </svg>
+          <div class="dz-title">拖曳 PDF 至此</div>
+          <div class="dz-sub">或 <button type="button" class="link-btn" id="browse-btn">點此瀏覽</button></div>
+        </div>
+        <div class="dz-file" id="dz-file" hidden>
+          <div class="file-icon">PDF</div>
+          <div class="file-meta">
+            <div class="file-name" id="file-name"></div>
+            <div class="file-stats" id="file-stats"></div>
+          </div>
+          <button type="button" class="icon-btn" id="clear-file" title="移除">×</button>
+        </div>
+      </div>
+
+      <div class="basic-info" id="basic-info" hidden>
+        <h3>病患基本資料</h3>
+        <pre id="basic-info-content"></pre>
+      </div>
+
+      <h2 class="panel-title">2. 模式</h2>
+      <div class="mode-toggle" role="radiogroup" aria-label="摘要模式">
+        <label class="mode-opt">
+          <input type="radio" name="mode" value="quick" checked />
+          <div>
+            <div class="mode-title">含完整資料</div>
+            <div class="mode-sub">所有段落含檢驗/影像報告</div>
+          </div>
+        </label>
+        <label class="mode-opt">
+          <input type="radio" name="mode" value="quick_no_lab" />
+          <div>
+            <div class="mode-title">去除檢驗/影像</div>
+            <div class="mode-sub">聚焦臨床敘述，去除放射/病理報告</div>
+          </div>
+        </label>
+      </div>
+
+      <div class="prompt-editor" id="prompt-editor">
+        <div class="prompt-editor-head">
+          <span>自訂 Prompt</span>
+          <button type="button" class="link-btn" id="reset-prompt-btn">還原預設</button>
+        </div>
+        <textarea id="prompt-textarea" spellcheck="false" rows="10"
+                  placeholder="必須保留 {sections_block} 佔位符。"></textarea>
+        <p class="hint">提示：<code>{sections_block}</code> 會被替換為 PDF 各段落原文。</p>
+      </div>
+
+      <h2 class="panel-title">3. 產生摘要</h2>
+      <button id="run-btn" class="primary-btn" disabled>
+        <span class="btn-label">啟動摘要</span>
+        <span class="btn-spinner" hidden></span>
+      </button>
+
+      <details class="diag">
+        <summary>系統診斷</summary>
+        <div id="diag-body">
+          <button class="ghost-btn" id="health-btn">檢查模型連線</button>
+          <pre id="diag-out"></pre>
+        </div>
+      </details>
+    </section>
+
+    <!-- RIGHT: output -->
+    <section class="panel panel-right">
+      <div class="output-head">
+        <h2 class="panel-title">摘要結果</h2>
+        <div class="actions">
+          <button class="ghost-btn" id="copy-btn" disabled>複製 Markdown</button>
+          <button class="ghost-btn" id="download-btn" disabled>下載 .md</button>
+        </div>
+      </div>
+
+      <div class="meta-row" id="meta-row" hidden>
+        <span id="meta-elapsed"></span>
+        <span id="meta-mode"></span>
+      </div>
+
+      <div id="output" class="output">
+        <div class="placeholder">
+          <h3>等待上傳病歷</h3>
+          <p>上傳出院病摘 PDF，選擇模式後按「啟動摘要」。</p>
+          <p style="margin-top: 1em; font-size: 13px; color: var(--ink-3);">
+            <strong>含完整資料</strong>：所有段落送入模型，含檢驗數值與影像/病理報告原文。<br>
+            <strong>去除檢驗/影像</strong>：過濾放射線報告與病理報告，聚焦臨床敘述，日期混淆風險較低。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>病摘總結系統 · <span id="footer-host"></span></span>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
